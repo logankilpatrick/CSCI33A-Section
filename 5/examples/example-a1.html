@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Webpage</title>
+        <style>
+            @keyframes funnygrow {
+                0% {
+                    color: red;
+                    font-size: 100%;
+                }
+                17% {
+                    color: orange;
+                    font-size: 200%;
+                }
+                34% {
+                    color: blue;
+                    font-size: 300%;
+                }
+                50% {
+                    color: purple;
+                    font-size: 400%;
+                }
+                67% {
+                    color: green;
+                    font-size: 300%;
+                }
+                84% {
+                    color: yellow;
+                    font-size: 200%;
+                }
+                100% {
+                    color: red;
+                    font-size: 100%;
+                }
+            }
+
+            h1 {
+                font-size: 50px;
+                padding-top:100px;
+                animation-name: funnygrow;
+                animation-duration: 3s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            div{
+               text-align: center;
+            }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const h1 = document.querySelector('h1');
+                h1.style.animationPlayState  = 'paused';
+                document.querySelector('button').onclick = () => {
+                    if (h1.style.animationPlayState  === 'paused')
+                        h1.style.animationPlayState = 'running';
+                    else
+                        h1.style.animationPlayState  = 'paused';
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <button>Rain!</button>
+    <div>
+      <h1>Rainbow!</h1>
+    </div>
+
+    </body>
+</html>
